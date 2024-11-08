@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тандем сайт</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .work-item {
+            background: white;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .stars {
+            display: flex;
+            cursor: pointer;
+        }
+        .star {
+            font-size: 25px;
+            color: lightgray;
+        }
+        .star.selected {
+            color: gold;
+        }
+        .image-container {
+            text-align: center;
+            margin: 10px 0;
+        }
+        .chat-button {
+            display: block;
+            margin: 0 auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+        }
+        .chat-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Проекты сотрудников</h1>
+
+<div class="work-item">
+    <h2>Проект 1</h2>
+    <p>"Улучшение системы энергосбережения...."</p>
+    <div class="stars" data-item-id="1">
+        <span class="star" data-value="1">★</span>
+        <span class="star" data-value="2">★</span>
+        <span class="star" data-value="3">★</span>
+        <span class="star" data-value="4">★</span>
+        <span class="star" data-value="5">★</span>
+    </div>
+</div>
+
+<div class="work-item">
+    <h2>Проект 2</h2>
+    <p>"Проект на тему архитектуры здания...."</p>
+    <div class="stars" data-item-id="2">
+        <span class="star" data-value="1">★</span>
+        <span class="star" data-value="2">★</span>
+        <span class="star" data-value="3">★</span>
+        <span class="star" data-value="4">★</span>
+        <span class="star" data-value="5">★</span>
+    </div>
+</div>
+
+
+<div class="image-container">
+    <img src="ФИНАЛОЧК.png" alt="Логотип Тандема" width="431" height="377">
+</div>
+
+
+<button class="chat-button">Перейти в чат</button>
+
+<script>
+    const stars = document.querySelectorAll('.star');
+    stars.forEach(star => {
+        star.addEventListener('click', () => {
+            const rating = star.getAttribute('data-value');
+            const starsContainer = star.parentElement;
+
+            // Сбрасываем  звёзды
+            starsContainer.querySelectorAll('.star').forEach(s => s.classList.remove('selected'));
+            
+            // Выделяем звёзды 
+            for (let i = 1; i <= rating; i++) {
+                starsContainer.querySelector(`.star[data-value="${i}"]`).classList.add('selected');
+            }
+            alert(`Вы оценили работу на ${rating} звёзд(ы)!`);
+        });
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,125 @@
+body {
+    font-family: monospace;
+}
+
+ul {
+    font-family: helvetica;
+}
+
+li {
+    list-style: circle;
+  }
+  
+  .list {
+    list-style: square;
+  }
+  
+  #msg {
+    font-family: monospace;
+  }
+
+  .light-theme {
+    color: #f35900;
+    background: #ece899;
+  }
+
+  .btn {
+    position: absolute;
+    top: 20px;
+    left: 250px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: none;
+    color: var(--btnFontColor);
+    background-color: var(--btnBg);
+  }
+
+  .thx {
+    color: #fdfffd;
+    top: 200px;
+    left: 250px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: none;
+    
+  }
+
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .container {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.5)rgba(0,0,0,0.5)), url();
+    background-size: cover;
+    background-position: center;
+  }
+
+  .login {
+    width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #000000;
+    padding: 90px;
+    text-align: center;
+    border-radius: 60px;
+    box-shadow: 0 0 10px #111044;
+  }
+
+  .login h1 {
+    color: #fff;
+    text-transform: uppercase;
+  }
+
+  .login input [type= "text"], .login input[type = "password"] {
+    display: block;
+    background: none;
+    border: none;
+    outline: 0;
+    color: #fff;
+    text-align: center;
+    margin: 20px auto;
+    border: 2px solid #ffffff ;
+    padding: 15px 20px;
+    border-radius: 25px;
+  }
+
+  .login input [type="text"] {
+    display: block;
+    background: none;
+    border: none;
+    outline: 0;
+    color: #fff;
+    text-align: center;
+    margin: 20px auto;
+    border: 2px solid #fcfcfc ;
+    padding: 15px 20px;
+    border-radius: 20px;
+  }
+
+  .login input[type="submit"]{
+    display: block;
+    background: none;
+    border: none;
+    outline: 0;
+    color: #fff;
+    text-align: center;
+    margin: 20px auto;
+    border: 2px solid #ffffff ;
+    padding: 15px 20px;
+    border-radius: 20px;
+  }
+
+ .login input[type="submit"]:hover {
+    background-color: #e4e0e6;
+    cursor: pointer;
+    border: 2xp solid #fff;
+ }
